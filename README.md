@@ -1,2 +1,2 @@
-# vue2admin
-AdminLTE dashboard built on Vue 2
+**Vue2Admin** is a fully responsive admin template that is inspired by [AdminLTE](https://almsaeedstudio.com). 
+

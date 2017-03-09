@@ -2,7 +2,7 @@
 
 #### Screenshots
 
-![Screenshot1](https://github.com/harryho/Vue2Admin/blob/master/static/img/vue2admin_screenshot1.png)
+![Screenshot1](static/img/vue2admin_screenshot1.png)
 
 ![Screenshot2](https://github.com/harryho/Vue2Admin/blob/master/static/img/vue2admin_screenshot2.png)
 

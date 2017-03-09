@@ -56,24 +56,30 @@
 </template> 
 <script>
   import $ from 'jquery'
+  // import CKEDITOR from 'ckeditor'
+  // import CKEDITOR from '../../../static/js/plugins/ckeditor/ckeditor.js'
+  // require('wysihtml')
 
   export default {
     name: 'Editor',
     mounted () {
       // Replace the <textarea id="editor1"> with a CKEditor
       // instance, using default configuration.
-      $.getScript('/static/js/plugins/ckeditor/ckeditor.js', function (data, textStatus, jqxhr) { 
+      // $.getScript('/static/js/plugins/ckeditor/ckeditor.js', function (data, textStatus, jqxhr) { 
+        let CKEDITOR = window['CKEDITOR']
+        
         CKEDITOR.replace('editor1')
-      })
-      let CKEDITOR = window['CKEDITOR']
+      // })
+      // let CKEDITOR = window['CKEDITOR']
 
       // bootstrap WYSIHTML5 - text editor
-      $.getScript('/static/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js', function (data, textStatus, jqxhr) {
-          console.log('----------------', wysihtml5)
-          let wysihtml5 = window['wysihtml5']
-          $.fn.wysihtml5 = wysihtml5
+      // $.getScript('/static/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js', function (data, textStatus, jqxhr) {
+      // //     console.log('----------------', wysihtml5)
+      //     let wysihtml5 = window['wysihtml5']
+      //     $.fn.wysihtml5 = wysihtml5
           window.$('#wysi').wysihtml5()
-      })
+      // })
+      // window.$('#wysi').wysihtml5()
     }
   }
 </script>

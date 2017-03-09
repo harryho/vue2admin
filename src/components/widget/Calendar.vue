@@ -77,15 +77,7 @@
     <!-- /.row -->
   </section>
 </template>
-<!--<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<script src="../plugins/fastclick/fastclick.js"></script>
-<script src="../dist/js/app.min.js"></script>
-<script src="../dist/js/demo.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<script src="../plugins/fullcalendar/fullcalendar.min.js"></script>-->
+
 <script>
   // import $ from 'jquery'
   // require('bootstrap')
@@ -99,7 +91,7 @@
 
 export default {
 
-  mounted(){
+  mounted () {
     // this.$nextTick(function () {
     // window.jQuery.getScript('/static/js/plugins/jqueryui/jquery-ui.min.js', function (data, textStatus, jqxhr) {
     //   window.jQuery.getScript('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js', function (data, textStatus, jqxhr) {
@@ -256,12 +248,10 @@ export default {
             //Remove event from text input
             $("#new-event").val("");
           });
-
-    // })
   }
 }
-  // });
+
 </script>
 <!--<style>
-  @import url('/static/js/plugins/fullcalendar/fullcalendar.min.css')
+  @import url('//static/js/plugins/fullcalendar/fullcalendar.min.css')
 </style>-->

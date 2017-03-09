@@ -30,7 +30,8 @@
                 <li v-if="state.userInfo.messages.length > 0">
                   <!-- inner menu: contains the messages -->
                   <ul class="menu">
-                    <li v-for="m in state.userInfo.messages">
+                     <!-- Just list top 3 -->
+                    <li v-for="( m, i ) in state.userInfo.messages" v-if="i <= 2">
                       <a href="javascript:;">
                         <div class="pull-left">
                           <img v-bind:src="m.senderProfile" class="img-circle" alt="User Image">
@@ -60,7 +61,8 @@
                 <li v-if="state.userInfo.notifications.length > 0">
                   <!-- Inner Menu: contains the notifications -->
                   <ul class="menu">
-                    <li v-for="n in state.userInfo.notifications">
+                    <!-- Just list top 3 -->
+                    <li v-for="(n, i) in state.userInfo.notifications" v-if="i <= 2">
                       <a href="javascript:;">
                         <h4>
                           <small><i class="fa fa-users text-aqua"></i> {{n}}</small>
@@ -84,13 +86,13 @@
                 <li v-if="state.userInfo.tasks.length > 0">
                   <!-- Inner menu: contains the tasks -->
                   <ul class="menu">
-                    <li v-for="t in state.userInfo.tasks">
+                     <!-- Just list top 3 -->
+                    <li v-for="(t, i) in state.userInfo.tasks" v-if="i <= 2">
                       <a href="javascript:;">
                         <h3>
                           {{t.event}}
                           <small class="pull-right">{{t.progress}}%</small>
-                        </h3>
-                        
+                        </h3>                        
                         <div class="progress xs">
                           <!-- Change the css width attribute to simulate progress -->
                           <div class="progress-bar progress-bar-aqua" v-bind:style="'width: ' + t.progress + '%'" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
@@ -99,24 +101,6 @@
                         </div>
                       </a>
                     </li> 
-                    <li>
-                      <!-- Task item -->
-                      <a href="javascript:;">
-                        <!-- Task title and progress text -->
-                        <h3>
-                          Design some buttons
-                          <small class="pull-right">20%</small>
-                        </h3>
-                        <!-- The progress bar -->
-                        <div class="progress xs">
-                          <!-- Change the css width attribute to simulate progress -->
-                          <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                            <span class="sr-only">20% Complete</span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <!-- end task item -->
                   </ul>
                 </li>
                 <li class="footer" v-if="state.userInfo.tasks.length > 0">
@@ -309,7 +293,7 @@
                 <router-link to="/compose"><i class="fa fa-circle-o"></i> Compose</router-link>
               </li>
               <li>
-                <router-link to="/read"><i class="fa fa-circle-o"></i>Read</router-link>
+                <router-link to="/readmail"><i class="fa fa-circle-o"></i>Read</router-link>
               </li>
             </ul>
           </li>
@@ -377,20 +361,7 @@
               </li>
             </ul>
           </li>
-          <li class="header">MISCELLANOUS</li>
-          <li class="pageLink" v-on:click="toggleMenu">
-            <router-link to="/access"><i class="fa fa-book"></i><span class="page">Access</span></router-link>
-          </li>
-          <li class="pageLink" v-on:click="toggleMenu">
-            <router-link to="/setting"><i class="fa fa-cog"></i><span class="page">Settings</span></router-link>
-          </li>
-          <li class="pageLink" v-on:click="toggleMenu">
-            <router-link to="/server"><i class="fa fa-hdd-o"></i><span class="page">Server</span></router-link>
-          </li>
-          <li class="pageLink" v-on:click="toggleMenu">
-            <router-link to="/repos"><i class="fa fa-heart"></i><span class="page">Repos</span>
-              <small class="label pull-right bg-green">AJAX</small></router-link>
-          </li>
+        
           <li class="header">PAGES</li>
           <!--<li class="pageLink" v-on:click="toggleMenu">
             <router-link to="/login"><i class="fa fa-circle-o text-yellow"></i> <span class="page">Login</span></router-link>
@@ -401,9 +372,7 @@
           <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
-          <li class="pageLink" v-on:click="toggleMenu">
-            <router-link to="/misc"><i class="fa fa-circle-o text-green"></i> <span class="page">Misc</span></router-link>
-          </li>
+          <li><a href="#"><i class="fa fa-circle-o text-green"></i> <span>Misc</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
       </section>
@@ -486,7 +455,7 @@ module.exports = {
   },
   methods: {
     changeloading: function () {
-      this.store.commit('TOGGLE_SEARCHING')
+      this.store.commit('globalSearching')
     },
     toggleMenu: function (event) {
       // remove active from li
@@ -519,13 +488,10 @@ module.exports = {
     // Page is ready. Let's load our functions!   
     this.callAPI('GET', 'static/data/userinfo.json').then(
       ok => {
-       console.log('ssssss', ok.body)
-       this.$parent.$store.commit('SET_USERINFO', ok.body)
-       console.log('state ...', this.$parent.$store.state)
+       this.$parent.$store.commit('setUserInfo', ok.body)
     }, err => {
-       console.log('eeeeeee', err)
-    })
- 
+       console.log('Error: ', err)
+    }) 
   }
 }
 </script>

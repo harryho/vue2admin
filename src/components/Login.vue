@@ -44,11 +44,11 @@ module.exports = {
 
       this.toggleLoading()
       this.resetResponse()
-      store.commit('TOGGLE_LOADING')
+      store.commit('loginLoading')
 
       //  Login
       this.$parent.callAPI('POST', '/login', { username: this.username, password: this.password }).then(function (response) {
-        store.commit('TOGGLE_LOADING')
+        store.commit('loginLoading')
 
         if (response.data) {
           var data = response.data
@@ -65,9 +65,9 @@ module.exports = {
           } else {
             //  success. Let's load up the dashboard
             if (data.user) {
-              store.commit('SET_USER', data.user)
+              store.commit('setUser', data.user)
               var token = 'Bearer ' + data.token
-              store.commit('SET_TOKEN', token)
+              store.commit('setToken', token)
 
               // Save to local storage as well
               if (window.localStorage) {
@@ -85,7 +85,7 @@ module.exports = {
         self.toggleLoading()
       }, function (response) {
         // error
-        store.commit('TOGGLE_LOADING')
+        store.commit('loginLoading')
         console.log('Error', response)
         self.response = 'Server appears to be offline'
         self.toggleLoading()

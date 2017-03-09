@@ -257,7 +257,7 @@
         //-------------
         //- LINE CHART -
         //--------------
-        var lineChartCanvas = $("#lineChart").get(0).getContext("2d");        
+        var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
         var lineChartOptions = areaChartOptions;
         lineChartOptions.datasetFill = false;
         var lineChartData = $.extend({}, _chartData)

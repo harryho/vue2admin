@@ -273,7 +273,7 @@
                     Mouse speed <span id="mousespeed">Loading..</span>
                   </p>
 
-                  <p>
+                  <p>vue
                     Inline <span class="sparkline-1">10,8,9,3,5,8,5</span>
                     line graphs
                     <span class="sparkline-1">8,4,0,0,0,0,1,4,4,10,10,10,10,0,0,0,4,6,5,9,10</span>
@@ -358,23 +358,6 @@
       <!-- /.row -->
 
     </section></template>
-<!-- jQuery 2.2.3 -->
-<!--<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>-->
-<!-- Bootstrap 3.3.6 -->
-<!--<script src="../../bootstrap/js/bootstrap.min.js"></script>-->
-<!-- SlimScroll 1.3.0 -->
-<!--<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>-->
-<!-- FastClick -->
-<!--<script src="../../plugins/fastclick/fastclick.js"></script>-->
-<!-- AdminLTE App -->
-<!--<script src="../../dist/js/app.min.js"></script>-->
-<!-- AdminLTE for demo purposes -->
-<!--<script src="../../dist/js/demo.js"></script>-->
-<!-- jQuery Knob -->
-<!--<script src="../../plugins/knob/jquery.knob.js"></script>-->
-<!-- Sparkline -->
-<!--<script src="../../plugins/sparkline/jquery.sparkline.min.js"></script>-->
-<!-- page script -->
 <script>
   import $ from 'jquery'
   // import widget from 'jquery.ui.widget'

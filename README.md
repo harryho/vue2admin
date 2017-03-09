@@ -2,9 +2,9 @@
 
 #### Screenshots
 
-![Screenshot1](static/img/vue2admin_screenshot1.png)
+![Screenshot1](screenshots/vue2admin_screenshot1.PNG)
 
-![Screenshot2](screenshots/vue2admin_screenshot1.PNG)
+![Screenshot2](screenshots/vue2admin_screenshot2.PNG)
 
 #### Download:
 

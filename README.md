@@ -1,5 +1,11 @@
 **Vue2Admin** is a fully responsive admin template that is inspired by [AdminLTE](https://almsaeedstudio.com). 
 
+* This template is built-in with Vue 2 at the start.
+* It include Vue Resource, Vuex as well.
+* The plugins for this project are loaded with script loader. 
+* Chart.js has been upgraded to 2.x.x 
+
+
 #### Screenshots
 
 ![Screenshot1](screenshots/vue2admin_screenshot1.PNG)

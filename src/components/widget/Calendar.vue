@@ -79,25 +79,14 @@
 </template>
 
 <script>
-  // import $ from 'jquery'
-  // require('bootstrap')
-  // require('jquery-ui')
-  // require('jquery.inputmask')
-  // require('moment')
-  require('icheck')
-  require('bootstrap-datepicker')
-  require('bootstrap-daterangepicker')
-  // require('fullcalendar')
+  // require('icheck')
+  // require('bootstrap-datepicker')
+  // require('bootstrap-daterangepicker')  
 
 export default {
-
   mounted () {
-    // this.$nextTick(function () {
-    // window.jQuery.getScript('/static/js/plugins/jqueryui/jquery-ui.min.js', function (data, textStatus, jqxhr) {
-    //   window.jQuery.getScript('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js', function (data, textStatus, jqxhr) {
-    //     window.jQuery.getScript('/static/js/plugins/fullcalendar/fullcalendar.min.js', function (data, textStatus, jqxhr) {
-    /* initialize the external events
-     -----------------------------------------------------------------*/
+    this.$nextTick(function () {
+
           var $ = window.jQuery;
 
           function initEvents (ele) {
@@ -248,6 +237,7 @@ export default {
             //Remove event from text input
             $("#new-event").val("");
           });
+    });
   }
 }
 

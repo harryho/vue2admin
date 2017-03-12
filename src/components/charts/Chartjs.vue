@@ -91,15 +91,11 @@
     </section>
 </template>
 
-<!-- ChartJS 1.0.1 -->
-<!--<script src="../../plugins/chartjs/Chartjs.min.js"></script>-->
-<!-- page script -->
 <script>
   import $ from 'jquery'
   require('bootstrap')
   import Chartjs from 'chart.js'
 
-  // $(function () {
   export default {
     name: 'Chartjs',
     mounted () {
@@ -115,34 +111,6 @@
 
         // Get context with jQuery - using jQuery's .get() method.
         var areaChartCanvas = $("#areaChart").get(0).getContext("2d");
-        // This will get the first returned node in the jQuery collection.
-        // var areaChart = new Chartjs(areaChartCanvas);
-
-        // var areaChartData = {
-        //   labels: ["January", "February", "March", "April", "May", "June", "July"],
-        //   datasets: [
-        //     {
-        //       label: "Electronics",
-        //       fillColor: "rgba(210, 214, 222, 1)",
-        //       strokeColor: "rgba(210, 214, 222, 1)",
-        //       pointColor: "rgba(210, 214, 222, 1)",
-        //       pointStrokeColor: "#c1c7d1",
-        //       pointHighlightFill: "#fff",
-        //       pointHighlightStroke: "rgba(220,220,220,1)",
-        //       data: [65, 59, 80, 81, 56, 55, 40]
-        //     },
-        //     {
-        //       label: "Digital Goods",
-        //       fillColor: "rgba(60,141,188,0.9)",
-        //       strokeColor: "rgba(60,141,188,0.8)",
-        //       pointColor: "#3b8bba",
-        //       pointStrokeColor: "rgba(60,141,188,1)",
-        //       pointHighlightFill: "#fff",
-        //       pointHighlightStroke: "rgba(60,141,188,1)",
-        //       data: [28, 48, 40, 19, 86, 27, 90]
-        //     }
-        //   ]
-        // };
 
       var _chartData = {
           labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -174,36 +142,6 @@
 
 
         var areaChartData = $.extend(true, {}, _chartData)
-        // areaChartData.datasets[0].fill = false;
-        // areaChartData.datasets[1].fill = false;
-        
-        //  {
-        //   labels: ["January", "February", "March", "April", "May", "June", "July"],
-        //   datasets: [
-        //     {
-        //       label: "Digital Goods",
-        //       fill: true,
-        //       backgroundColor: "rgba(60,141,188,0.9)",
-        //       borderColor: "rgba(60,141,188,0.8)",
-        //       pointBorderColor: "#3b8bba",
-        //       pointBackgroundColor: "rgba(60,141,188,1)",
-        //       pointHoverBackgroundColor: "#fff",
-        //       pointHoverBorderColor: "rgba(60,141,188,1)",
-        //       data: [28, 48, 40, 19, 86, 27, 90]
-        //     },
-        //     {
-        //       label: "Electronics",
-        //       fill: true,
-        //       backgroundColor: "rgba(210, 214, 222, 1)",
-        //       borderColor: "rgba(210, 214, 222, 1)",
-        //       pointBorderColor: "rgba(210, 214, 222, 1)",
-        //       pointBackgroundColor: "#c1c7d1",
-        //       pointHoverBackgroundColor: "#fff",
-        //       pointHoverBorderColor: "rgba(220,220,220,1)",
-        //       data: [65, 59, 80, 81, 56, 55, 40]
-        //     }            
-        //   ]
-        // };
 
         var areaChartOptions = {
           //Boolean - If we should show the scale at all
@@ -315,44 +253,6 @@
               ]
             }
 
-        //  [
-        //   {
-        //     value: 700,
-        //     color: "#f56954",
-        //     highlight: "#f56954",
-        //     label: "Chrome"
-        //   },
-        //   {
-        //     value: 500,
-        //     color: "#00a65a",
-        //     highlight: "#00a65a",
-        //     label: "IE"
-        //   },
-        //   {
-        //     value: 400,
-        //     color: "#f39c12",
-        //     highlight: "#f39c12",
-        //     label: "FireFox"
-        //   },
-        //   {
-        //     value: 600,
-        //     color: "#00c0ef",
-        //     highlight: "#00c0ef",
-        //     label: "Safari"
-        //   },
-        //   {
-        //     value: 300,
-        //     color: "#3c8dbc",
-        //     highlight: "#3c8dbc",
-        //     label: "Opera"
-        //   },
-        //   {
-        //     value: 100,
-        //     color: "#d2d6de",
-        //     highlight: "#d2d6de",
-        //     label: "Navigator"
-        //   }
-        // ];
         var pieOptions = {
           //Boolean - Whether we should show a stroke on each segment
           segmentShowStroke: true,
@@ -428,8 +328,6 @@
             data: barChartData,
             options: barChartOptions
         });
-        // barChart.Bar(barChartData, barChartOptions);
-      // })
     }
   }
 </script>

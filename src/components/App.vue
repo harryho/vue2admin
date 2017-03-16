@@ -13,7 +13,7 @@
         section: 'Head',
         version: '0.10.0',
         callingAPI: false,
-        serverURI: 'http://0.0.0.0:8080', // 'http://10.110.1.10:8080',
+        serverURI: 'http://0.0.0.0:8080', 
         caller: this.$http
       }
     },
@@ -26,8 +26,8 @@
           url: url,
           method: method,
           data: data,
+          dataType: 'json',
           success: callback,
-
         })
       },
       logout: function () {

@@ -40,6 +40,7 @@ module.exports = {
     "space-before-blocks": "off",
     "no-multiple-empty-lines": "off",
     "brace-style" : "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "no-tabs" : "off"
   }
 }

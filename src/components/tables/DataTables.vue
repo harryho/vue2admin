@@ -122,9 +122,9 @@
 
                 console.log(this.tableData)
                 $("#example1").DataTable(
-                      {
+                    {
                       "data": tableData
-                      }
+                    }
                   );
 
                 $('#example2').DataTable({
@@ -132,7 +132,7 @@
                   "paging": true,
                   "lengthChange": false,
                   "searching": false,
-                  "ordering": true,
+                  "ordering": false,
                   "info": true,
                   "autoWidth": false
                 });

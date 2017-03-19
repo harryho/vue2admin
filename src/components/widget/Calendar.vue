@@ -79,9 +79,6 @@
 </template>
 
 <script>
-  // require('icheck')
-  // require('bootstrap-datepicker')
-  // require('bootstrap-daterangepicker')  
 
 export default {
   mounted () {
@@ -242,6 +239,6 @@ export default {
 }
 
 </script>
-<!--<style>
+<style>
   @import url('//static/js/plugins/fullcalendar/fullcalendar.min.css')
-</style>-->
+</style>

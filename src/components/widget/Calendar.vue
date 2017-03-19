@@ -239,6 +239,7 @@ export default {
 }
 
 </script>
-<style>
+<!--<style>
   @import url('//static/js/plugins/fullcalendar/fullcalendar.min.css')
 </style>
+-->

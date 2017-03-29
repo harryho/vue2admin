@@ -30,7 +30,7 @@
                 <li v-if="state.userInfo.messages.length > 0">
                   <!-- inner menu: contains the messages -->
                   <ul class="menu">
-                     <!-- Just list top 3 -->
+                    <!-- Just list top 3 -->
                     <li v-for="( m, i ) in state.userInfo.messages" v-if="i <= 2">
                       <a href="javascript:;">
                         <div class="pull-left">
@@ -68,7 +68,7 @@
                           <small><i class="fa fa-users text-aqua"></i> {{n}}</small>
                         </h4>
                       </a>
-                    </li>                  
+                    </li>
                     <!-- end notification -->
                   </ul>
                 </li>
@@ -86,21 +86,22 @@
                 <li v-if="state.userInfo.tasks.length > 0">
                   <!-- Inner menu: contains the tasks -->
                   <ul class="menu">
-                     <!-- Just list top 3 -->
+                    <!-- Just list top 3 -->
                     <li v-for="(t, i) in state.userInfo.tasks" v-if="i <= 2">
                       <a href="javascript:;">
                         <h3>
                           {{t.event}}
                           <small class="pull-right">{{t.progress}}%</small>
-                        </h3>                        
+                        </h3>
                         <div class="progress xs">
                           <!-- Change the css width attribute to simulate progress -->
-                          <div class="progress-bar progress-bar-aqua" v-bind:style="'width: ' + t.progress + '%'" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar progress-bar-aqua" v-bind:style="'width: ' + t.progress + '%'" role="progressbar" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100">
                             <span class="sr-only">{{t.progress}}% Complete</span>
                           </div>
                         </div>
                       </a>
-                    </li> 
+                    </li>
                   </ul>
                 </li>
                 <li class="footer" v-if="state.userInfo.tasks.length > 0">
@@ -148,137 +149,53 @@
             <span class="input-group-btn">
                   <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                   </button>
-                </span>
+            </span>
           </div>
         </form>
         <!-- /.search form -->
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-          <!--<li class="header">TOOLS</li>
-          <li class="active pageLink" v-on:click="toggleMenu">
-            <router-link to="/"><i class="fa fa-desktop"></i><span class="page">Dashboard</span></router-link>
-          </li>-->
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-dashboard"></i>
-              <span>Dashboard</span>
-              <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <router-link to="/dashboard1"><i class="fa fa-circle-o"></i>Dashboard 1</router-link>
-              </li>
-              <li>
-                <router-link to="/dashboard2"><i class="fa fa-circle-o"></i>Dashboard 2</router-link>
-              </li>
-              <li>
-                <router-link to="/"><i class="fa fa-circle-o"></i>Dashboard 3</router-link>
-              </li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-laptop"></i>
-              <span>UI Elements</span>
-              <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <router-link to="/general"><i class="fa fa-circle-o"></i> General</router-link>
-              </li>
-              <li>
-                <router-link to="/icons"><i class="fa fa-circle-o"></i> Icons</router-link>
-              </li>
-              <li>
-                <router-link to="/buttons"><i class="fa fa-circle-o"></i> Buttons</router-link>
-              </li>
-              <li>
-                <router-link to="/sliders"><i class="fa fa-circle-o"></i> Sliders</router-link>
-              </li>
-              <li>
-                <router-link to="/timeline"><i class="fa fa-circle-o"></i> Timeline</router-link>
-              </li>
-              <li>
-                <router-link to="/modals"><i class="fa fa-circle-o"></i> Modals</router-link>
-              </li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-edit"></i>
-              <span>Forms</span>
-              <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <router-link to="/general-form"><i class="fa fa-circle-o"></i> General Elements</router-link>
-              </li>
-              <li>
-                <router-link to="/advanced-form"><i class="fa fa-circle-o"></i>Advanced Form</router-link>
-              </li>
-              <li>
-                <router-link to="/editor"><i class="fa fa-circle-o"></i>Editor</router-link>
-              </li>
-            </ul>
-          </li>
-          <li class="pageLink" v-on:click="toggleMenu">
-            <router-link to="/widgets"><i class="fa fa-th"></i><span class="page">Widgets</span>
-              <small class="label pull-right bg-green">new</small></router-link>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-pie-chart"></i>
-              <span>Charts</span>
-              <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <router-link to="/chartjs"><i class="fa fa-circle-o"></i> ChartJs</router-link>
-              </li>
-              <li>
-                <router-link to="/morris"><i class="fa fa-circle-o"></i> Morris</router-link>
-              </li>
-              <li>
-                <router-link to="/flot"><i class="fa fa-circle-o"></i> Flot</router-link>
-              </li>
-              <li>
-                <router-link to="/inline"><i class="fa fa-circle-o"></i> Inline Charts</router-link>
-              </li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-table"></i>
-              <span>Tables</span>
-              <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <router-link to="/tables"><i class="fa fa-circle-o"></i> Simple Tables </router-link>
-              </li>
-              <li>
-                <router-link to="/datatables"><i class="fa fa-circle-o"></i>Data Tables</router-link>
-              </li>
-            </ul>
-          </li>
-          <li class="pageLink" v-on:click="toggleMenu">
+          <sidebar-menu name="Dashboard" menu-icon="fa-dashboard">
+            <sidebar-menu-item name="Dashboard 1" link="dashboard1"></sidebar-menu-item>
+            <sidebar-menu-item name="Dashboard 2" link="dashboard1"></sidebar-menu-item>
+            <sidebar-menu-item name="Dashboard 3" link="dashboard1"></sidebar-menu-item>
+          </sidebar-menu>
+          <sidebar-menu name="UI Elements" menu-icon="fa-laptop">
+            <sidebar-menu-item name="General" link="general"></sidebar-menu-item>
+            <sidebar-menu-item name="Icons" link="icons"></sidebar-menu-item>
+            <sidebar-menu-item name="Buttons" link="buttons"></sidebar-menu-item>
+            <sidebar-menu-item name="Sliders" link="sliders"></sidebar-menu-item>
+            <sidebar-menu-item name="Timeline" link="timeline"></sidebar-menu-item>
+            <sidebar-menu-item name="Modals" link="modals"></sidebar-menu-item>
+          </sidebar-menu>
+          <sidebar-menu name="Forms" menu-icon="fa-edit">
+            <sidebar-menu-item name="General Elements" link="general"></sidebar-menu-item>
+            <sidebar-menu-item name="Advanced Form" link="icons"></sidebar-menu-item>
+            <sidebar-menu-item name="Editor" link="buttons"></sidebar-menu-item>
+          </sidebar-menu>
+          <sidebar-menu name="Charts" menu-icon="fa-pie-chart">
+            <sidebar-menu-item name="ChartJs" link="chartjs"></sidebar-menu-item>
+            <sidebar-menu-item name="Morris" link="morris"></sidebar-menu-item>
+            <sidebar-menu-item name="Flot" link="flot"></sidebar-menu-item>
+            <sidebar-menu-item name="Inline Charts" link="inline"></sidebar-menu-item>
+          </sidebar-menu>
+          <sidebar-menu name="Tables" menu-icon="fa-table">
+            <sidebar-menu-item name="Simple Tables" link="tables"></sidebar-menu-item>
+            <sidebar-menu-item name="Data Tables" link="datatables"></sidebar-menu-item>
+          </sidebar-menu>
+          <!--<li class="pageLink" v-on:click="toggleMenu">
             <router-link to="/calendar"><i class="fa fa-calendar"></i><span class="page">Calendar</span>
               <span class="pull-right-container">
             <small class="label pull-right bg-blue">17</small>&nbsp;&nbsp;
             <small class="label pull-right bg-red">3</small>
             </span></router-link>
-          </li>
-          <li class="treeview">
+          </li>-->
+          <!--<sidebar-menu name="Clander" menu-icon="fa-table">-->
+          <sidebar-menu-item name="Calendar" link="calendar" 
+            :labels="[{'col':'bg-purple', 'txt':'11'}, {'col':'bg-yellow', 'txt':'6'}, {'col':'bg-blue', 'txt':'10'}]">
+          </sidebar-menu-item>
+          <!--</sidebar-menu>-->
+          <!--<li class="treeview">
             <a href="#"><i class="fa fa-envelope"></i><span class="page">MailBox</span>
             <span class="pull-right-container">
             <small class="label pull-right bg-blue">17</small>&nbsp;&nbsp;
@@ -296,7 +213,13 @@
                 <router-link to="/readmail"><i class="fa fa-circle-o"></i>Read</router-link>
               </li>
             </ul>
-          </li>
+          </li>-->
+           <sidebar-menu name="MailBox" menu-icon="fa-envelope"
+            :labels="[{'col':'bg-blue', 'txt':'11'}, {'col':'bg-red', 'txt':'9'}, {'col':'bg-yellow', 'txt':'17'}]">
+            <sidebar-menu-item name="Inbox" link="inbox"></sidebar-menu-item>
+            <sidebar-menu-item name="Compose" link="compose"></sidebar-menu-item>
+            <sidebar-menu-item name="Read" link="readmail"></sidebar-menu-item>
+          </sidebar-menu>
           <li class="treeview">
             <a href="#">
               <i class="fa fa-folder"></i>
@@ -361,7 +284,6 @@
               </li>
             </ul>
           </li>
-        
           <li class="header">PAGES</li>
           <!--<li class="pageLink" v-on:click="toggleMenu">
             <router-link to="/login"><i class="fa fa-circle-o text-yellow"></i> <span class="page">Login</span></router-link>
@@ -373,6 +295,15 @@
           <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-green"></i> <span>Misc</span></a></li>
+          <!--<sidebar-menu name="Hello" :labels="[{'col':'bg-blue', 'txt':'11'}, {'col':'bg-yellow', 'txt':'17'}]">
+            <sidebar-menu-item name="ABC" link="abc" labels="[{'col':'text-yellow', 'txt':'11'}]"></sidebar-menu-item>
+          </sidebar-menu>-->
+          <!--<sidebar-menu name="Hello 2" menu-icon="fa-book">
+            <sidebar-menu-item name="ABC sdfsdf" link="abc 1" is-multi-level="yes">
+              <sidebar-menu-item name="ABC sdfsdf" link="abc 2">
+              </sidebar-menu-item>
+            </sidebar-menu-item>
+          </sidebar-menu>-->
         </ul>
         <!-- /.sidebar-menu -->
       </section>
@@ -410,12 +341,17 @@
 <script>
 import faker from 'faker'
 import asideTabs from './AsideTabs.vue'
+import sidebarMenu from './SideBarMenu.vue'
+import sidebarMenuItem from './SideBarMenuItem.vue'
+
 require('hideseek')
 
 module.exports = {
   name: 'Main',
   components: {
-    asideTabs
+    asideTabs,
+    sidebarMenu,
+    sidebarMenuItem
   },
   data: function () {
     return {

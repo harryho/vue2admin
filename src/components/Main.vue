@@ -190,11 +190,9 @@
             <small class="label pull-right bg-red">3</small>
             </span></router-link>
           </li>-->
-          <!--<sidebar-menu name="Clander" menu-icon="fa-table">-->
           <sidebar-menu-item name="Calendar" link="calendar" menu-icon="fa-calendar"
             :labels="[{'col':'bg-purple', 'txt':'11'}, {'col':'bg-yellow', 'txt':'6'}, {'col':'bg-blue', 'txt':'10'}]">
           </sidebar-menu-item>
-          <!--</sidebar-menu>-->
           <!--<li class="treeview">
             <a href="#"><i class="fa fa-envelope"></i><span class="page">MailBox</span>
             <span class="pull-right-container">
@@ -285,12 +283,6 @@
             </ul>
           </li>
           <li class="header">PAGES</li>
-          <!--<li class="pageLink" v-on:click="toggleMenu">
-            <router-link to="/login"><i class="fa fa-circle-o text-yellow"></i> <span class="page">Login</span></router-link>
-          </li>-->
-          <!--<li class="pageLink" v-on:click="toggleMenu">
-            <router-link to="/404"><i class="fa fa-circle-o text-red"></i> <span class="page">404</span></router-link>
-          </li>-->
           <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>

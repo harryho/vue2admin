@@ -205,7 +205,7 @@ require('datatables.net-bs')
 module.exports = {
   name: 'Tables',
   mounted: function () {
-    this.$nextTick(function () {
+    this.$nextTick(function () {   
       $('#example1').DataTable()
     })
   }

@@ -10,8 +10,8 @@
       <li class="fa fa-circle-o"></li>
       <span>{{name}}</span>
       <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            <i class="fa fa-angle-left pull-right"></i>
+      </span>
       <span v-if="labels.length > 0 " class="pull-right-container">
              <small v-for="label in labels" class="label pull-right" :class="label.col">{{label.txt}}</small>&nbsp;
       </span>

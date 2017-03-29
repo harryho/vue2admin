@@ -2,7 +2,7 @@
   <li class="treeview" @click="menuClick">
     <a href="#">
       <!--<i class="fa fa-folder"></i>-->
-      <li :class="menuClass"></li>
+      <li class="fa" :class="[menuIcon ? menuIcon : 'fa-circle-o']"></li>
       <span>{{name}}</span>
       <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -10,7 +10,7 @@
         <span v-if="labels.length > 0 " class="pull-right-container">
             <small v-for="label in labels" class="label pull-right" :class="label.col">{{label.txt}}</small>&nbsp;
         </span>
-        </a>
+    </a>
     <ul class="treeview-menu">
         <slot></slot>
     </ul>
@@ -23,12 +23,7 @@ module.exports = {
         name: { required: true },
         menuIcon: { required: false },
         labels: { required: false, default: () => [] } 
-    },
-    computed: {
-        menuClass: function(){
-            return this.menuIcon ? 'fa ' + this.menuIcon : 'fa fa-folder';
-        },
-    },
+    },    
     methods: {
         menuClick: function (){
             if (window.$('treeview').hasClass('active')){

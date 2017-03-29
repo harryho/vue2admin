@@ -157,8 +157,8 @@
         <ul class="sidebar-menu">
           <sidebar-menu name="Dashboard" menu-icon="fa-dashboard">
             <sidebar-menu-item name="Dashboard 1" link="dashboard1"></sidebar-menu-item>
-            <sidebar-menu-item name="Dashboard 2" link="dashboard1"></sidebar-menu-item>
-            <sidebar-menu-item name="Dashboard 3" link="dashboard1"></sidebar-menu-item>
+            <sidebar-menu-item name="Dashboard 2" link="dashboard2"></sidebar-menu-item>
+            <sidebar-menu-item name="Dashboard 3" link="dashboard3"></sidebar-menu-item>
           </sidebar-menu>
           <sidebar-menu name="UI Elements" menu-icon="fa-laptop">
             <sidebar-menu-item name="General" link="general"></sidebar-menu-item>

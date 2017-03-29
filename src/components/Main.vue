@@ -191,7 +191,7 @@
             </span></router-link>
           </li>-->
           <!--<sidebar-menu name="Clander" menu-icon="fa-table">-->
-          <sidebar-menu-item name="Calendar" link="calendar" 
+          <sidebar-menu-item name="Calendar" link="calendar" menu-icon="fa-calendar"
             :labels="[{'col':'bg-purple', 'txt':'11'}, {'col':'bg-yellow', 'txt':'6'}, {'col':'bg-blue', 'txt':'10'}]">
           </sidebar-menu-item>
           <!--</sidebar-menu>-->
@@ -217,7 +217,7 @@
            <sidebar-menu name="MailBox" menu-icon="fa-envelope"
             :labels="[{'col':'bg-blue', 'txt':'11'}, {'col':'bg-red', 'txt':'9'}, {'col':'bg-yellow', 'txt':'17'}]">
             <sidebar-menu-item name="Inbox" link="inbox"></sidebar-menu-item>
-            <sidebar-menu-item name="Compose" link="compose"></sidebar-menu-item>
+            <sidebar-menu-item name="Compose" link="compose" menu-icon="fa-edit"></sidebar-menu-item>
             <sidebar-menu-item name="Read" link="readmail"></sidebar-menu-item>
           </sidebar-menu>
           <li class="treeview">
@@ -295,15 +295,7 @@
           <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-green"></i> <span>Misc</span></a></li>
-          <!--<sidebar-menu name="Hello" :labels="[{'col':'bg-blue', 'txt':'11'}, {'col':'bg-yellow', 'txt':'17'}]">
-            <sidebar-menu-item name="ABC" link="abc" labels="[{'col':'text-yellow', 'txt':'11'}]"></sidebar-menu-item>
-          </sidebar-menu>-->
-          <!--<sidebar-menu name="Hello 2" menu-icon="fa-book">
-            <sidebar-menu-item name="ABC sdfsdf" link="abc 1" is-multi-level="yes">
-              <sidebar-menu-item name="ABC sdfsdf" link="abc 2">
-              </sidebar-menu-item>
-            </sidebar-menu-item>
-          </sidebar-menu>-->
+          
         </ul>
         <!-- /.sidebar-menu -->
       </section>

@@ -1,8 +1,9 @@
 <template>
   <li>
-    <router-link v-if="hasSubMenu === false" :to="link"><i class="fa fa-circle-o"></i>{{name}}
-      <span v-if="labels.length > 0 " class="pull-right-container">
-             <small v-for="label in labels" class="label pull-right" :class="label.col">{{label.txt}}</small>&nbsp;
+    <router-link v-if="hasSubMenu === false" :to="link">
+        <i :class="[menuIcon ? menuIcon : 'fa-circle-o']" class="fa"></i>{{name}}
+        <span v-if="labels.length > 0 " class="pull-right-container">
+            <small v-for="label in labels" class="label pull-right" :class="label.col">{{label.txt}}</small>&nbsp;
         </span>
     </router-link>
     <a href="#" v-if="hasSubMenu">
@@ -13,13 +14,14 @@
             </span>
       <span v-if="labels.length > 0 " class="pull-right-container">
              <small v-for="label in labels" class="label pull-right" :class="label.col">{{label.txt}}</small>&nbsp;
-        </span>
+      </span>
     </a>
     <ul v-if="hasSubMenu" class="treeview-menu" @click="menuClick">
       <slot></slot>
     </ul>
   </li>
 </template>
+
 <script>
 module.exports = {
     name: 'sidebarmenu',
@@ -27,6 +29,7 @@ module.exports = {
         name: { required: true },
         link: { type: String, required: true },
         isMultiLevel: { required: false, default: 'no' },
+        menuIcon: { required: false },
         labels: { required: false, default: () => [] } 
     },
     computed: {

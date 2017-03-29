@@ -6,10 +6,10 @@
       <span>{{name}}</span>
       <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
-            </span>
-            <span v-if="labels.length > 0 " class="pull-right-container">
-             <small v-for="label in labels" class="label pull-right" :class="label.col">{{label.txt}}</small>&nbsp;
-            </span>
+       </span>
+        <span v-if="labels.length > 0 " class="pull-right-container">
+            <small v-for="label in labels" class="label pull-right" :class="label.col">{{label.txt}}</small>&nbsp;
+        </span>
         </a>
     <ul class="treeview-menu">
         <slot></slot>

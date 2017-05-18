@@ -117,7 +117,6 @@
   export default {
     name: 'Sliders',
     mounted: function () {
-      this.$nextTick(function () {
         $('.slider').slider()
 
         $('#range_1').ionRangeSlider({
@@ -179,7 +178,13 @@
             //
           }
         })
-      })
+      // })
     }
   }
 </script>
+<style>
+  @import url('/static/js/plugins/ionslider/ion.rangeSlider.css');
+  @import url('/static/js/plugins/ionslider/ion.rangeSlider.skinNice.css');
+  @import url('/static/js/plugins/bootstrap-slider/slider.css');
+</style>
+

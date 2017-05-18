@@ -3,6 +3,11 @@
   <section class="content">
     <!-- Small boxes (Stat box) -->
     <div class="row">
+       <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h4><i class="icon fa fa-check"></i>Vue  2 Admin is open source!</h4>
+        Click on icon to check out it out on github. <a href="https://github.com/harryho/vue2admin" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+      </div>
       <div class="col-lg-3 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-aqua">
@@ -458,21 +463,12 @@
   <!-- /.content -->
 </template>
 <script>
-import $ from 'jquery'
-// import widget from 'jquery.ui.widget'
-require('bootstrap')
-require('jquery-ui')
-import moment from 'moment'
-import raphael from 'raphael'
-import sparkline from 'jquery-sparkline'
-import knob from 'jquery-knob'
-// import Morris from 'morris.js'
-
-
   export default {
     name: 'Dashboard1',
     mounted () {
-      var $ = window.$;
+
+      let $ = window.$;
+      let moment = window.moment;
 
       "use strict";
       //Make the dashboard widgets sortable Using jquery UI

@@ -81,10 +81,9 @@
 <script>
 
 export default {
+  name: 'Calendar',
   mounted () {
-    this.$nextTick(function () {
-
-          var $ = window.jQuery;
+          let $ = window.$;
 
           function initEvents (ele) {
             ele.each(function () {
@@ -234,12 +233,13 @@ export default {
             //Remove event from text input
             $("#new-event").val("");
           });
-    });
+    // });
   }
 }
 
 </script>
-<!--<style>
-  @import url('//static/js/plugins/fullcalendar/fullcalendar.min.css')
+
+<style>
+  @import url('/static/js/plugins/fullcalendar/fullcalendar.min.css');
 </style>
--->
+

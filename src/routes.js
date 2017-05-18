@@ -25,8 +25,6 @@ import EditorView from './components/forms/Editor.vue'
 
 // -- Tables --
 import TablesView from './components/tables/Tables.vue'
-import DataView from './components/tables/Data.vue'
-import SimpleView from './components/tables/Simple.vue'
 import DataTablesView from './components/tables/DataTables.vue'
 
 // -- Widgets --
@@ -114,15 +112,17 @@ const routes = [
         path: '/tables',
         component: TablesView,
         name: 'Tables'
-      }, {
-        path: '/simple',
-        component: SimpleView,
-        name: 'Simple'
-      }, {
-        path: '/data',
-        component: DataView,
-        name: 'Data'
-      }, {
+      }, 
+      // {
+      //   path: '/simple',
+      //   component: SimpleView,
+      //   name: 'Simple'
+      // }, {
+      //   path: '/data',
+      //   component: DataView,
+      //   name: 'Data'
+      // }, 
+      {
         path: '/datatables',
         component: DataTablesView,
         name: 'DataTables'
@@ -178,6 +178,10 @@ const routes = [
         path: '/invoice',
         component: InvoiceView,
         name: 'Invoice'
+      }, {
+        path: '/404',
+        component: NotFoundView,
+        name: '404'
       }, {
         path: '/500',
         component: ServerErrorView,

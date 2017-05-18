@@ -23,3 +23,8 @@
     <!-- /.error-page -->
   </section>
 </template>
+<script>
+    export default {
+    name: 'ServerError'
+  }
+  </script>

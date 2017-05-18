@@ -14,8 +14,9 @@
     <ul class="treeview-menu">
         <slot></slot>
     </ul>
-  </li>
+  </li>  
 </template>
+
 <script>
 module.exports = {
     name: 'sidebarmenu',
@@ -35,8 +36,6 @@ module.exports = {
         }
     },
     mounted: function () {
-        // window.$('treeview').removeClass('active')
-        // window.$('treeview').removeClass('active')
     }
 }        
 </script>

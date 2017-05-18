@@ -3,7 +3,7 @@
     <!-- Automatic element centering -->
     <div class="lockscreen-wrapper">
       <div class="lockscreen-logo">
-        <a href="../../index2.html"><b>Admin</b>LTE</a>
+        <a href="#"><b>Vue 2 </b>Admin</a>
       </div>
       <!-- User name -->
       <div class="lockscreen-name">John Doe</div>
@@ -33,7 +33,7 @@
         <a href="login.html">Or sign in as a different user</a>
       </div>
       <div class="lockscreen-footer text-center">
-        Copyright &copy; 2014-2016 <b><a href="http://almsaeedstudio.com" class="text-black">Almsaeed Studio</a></b><br>        All rights reserved
+        Copyright &copy; 2016-2017 <b><a href="#" class="text-black">Vue 2 Admin</a></b><br>        All rights reserved
       </div>
     </div>
   </body>

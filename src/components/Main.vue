@@ -21,13 +21,13 @@
           <ul class="nav navbar-nav">
             <!-- Messages-->
             <li class="dropdown messages-menu" @click="topBarToggleMenu">
-              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-envelope-o"></i>
-                <span class="label label-success">{{ state.userInfo.messages | count }}</span>
+                <span class="label label-success">{{ messageCount }}</span>
               </a>
               <ul class="dropdown-menu">
-                <li class="header">You have {{ state.userInfo.messages | count }} message(s)</li>
-                <li v-if="state.userInfo.messages.length > 0">
+                <li class="header">You have {{ messageCount }} message(s)</li>
+                <li v-if="messageCount > 0">
                   <!-- inner menu: contains the messages -->
                   <ul class="menu">
                     <!-- Just list top 3 -->
@@ -46,7 +46,7 @@
                   </ul>
                   <!-- /.menu -->
                 </li>
-                <li class="footer" v-if="state.userInfo.messages.length > 0"><a href="javascript:;">See All Messages</a></li>
+                <li class="footer" v-if="messageCount > 0"><a href="javascript:;">See All Messages</a></li>
               </ul>
             </li>
             <!-- /.messages-menu -->
@@ -54,11 +54,11 @@
             <li class="dropdown notifications-menu" @click="topBarToggleMenu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-bell-o"></i>
-                <span class="label label-warning">{{ state.userInfo.notifications | count }}</span>
+                <span class="label label-warning">{{ notificationCount }}</span>
               </a>
               <ul class="dropdown-menu">
-                <li class="header">You have {{ state.userInfo.notifications | count }} notification(s)</li>
-                <li v-if="state.userInfo.notifications.length > 0">
+                <li class="header">You have {{ notificationCount }} notification(s)</li>
+                <li v-if="notificationCount > 0">
                   <!-- Inner Menu: contains the notifications -->
                   <ul class="menu">
                     <!-- Just list top 3 -->
@@ -72,18 +72,18 @@
                     <!-- end notification -->
                   </ul>
                 </li>
-                <li class="footer" v-if="state.userInfo.notifications.length > 0"><a href="javascript:;">View all</a></li>
+                <li class="footer" v-if="notificationCount > 0"><a href="javascript:;">View all</a></li>
               </ul>
             </li>
             <!-- Tasks Menu -->
             <li class="dropdown tasks-menu" @click="topBarToggleMenu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-flag-o"></i>
-                <span class="label label-danger">{{ state.userInfo.tasks | count }} </span>
+                <span  class="label label-danger">{{ taskCount }} </span>
               </a>
               <ul class="dropdown-menu">
-                <li class="header">You have {{ state.userInfo.tasks | count }} task(s)</li>
-                <li v-if="state.userInfo.tasks.length > 0">
+                <li class="header">You have {{ taskCount } task(s)</li>
+                <li v-if="taskCount> 0">
                   <!-- Inner menu: contains the tasks -->
                   <ul class="menu">
                     <!-- Just list top 3 -->
@@ -104,14 +104,14 @@
                     </li>
                   </ul>
                 </li>
-                <li class="footer" v-if="state.userInfo.tasks.length > 0">
-                  <a href="javascript:;">View all tasks</a>
+                <li class="footer" v-if="taskCount > 0">
+                  <a href="#">View all tasks</a>
                 </li>
               </ul>
             </li>
             <!-- User Account Menu -->
             <li class="dropdown user user-menu">
-              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- The user image in the navbar-->
                 <img v-bind:src="demo.avatar" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
@@ -169,9 +169,9 @@
             <sidebar-menu-item name="Modals" link="modals"></sidebar-menu-item>
           </sidebar-menu>
           <sidebar-menu name="Forms" menu-icon="fa-edit">
-            <sidebar-menu-item name="General Elements" link="general"></sidebar-menu-item>
-            <sidebar-menu-item name="Advanced Form" link="icons"></sidebar-menu-item>
-            <sidebar-menu-item name="Editor" link="buttons"></sidebar-menu-item>
+            <sidebar-menu-item name="General Form" link="general-form"></sidebar-menu-item>
+            <sidebar-menu-item name="Advanced Form" link="advanced-form"></sidebar-menu-item>
+            <sidebar-menu-item name="Editor" link="editor"></sidebar-menu-item>
           </sidebar-menu>
           <sidebar-menu name="Charts" menu-icon="fa-pie-chart">
             <sidebar-menu-item name="ChartJs" link="chartjs"></sidebar-menu-item>
@@ -190,8 +190,7 @@
             <small class="label pull-right bg-red">3</small>
             </span></router-link>
           </li>-->
-          <sidebar-menu-item name="Calendar" link="calendar" menu-icon="fa-calendar"
-            :labels="[{'col':'bg-purple', 'txt':'11'}, {'col':'bg-yellow', 'txt':'6'}, {'col':'bg-blue', 'txt':'10'}]">
+          <sidebar-menu-item name="Calendar" link="calendar" menu-icon="fa-calendar" :labels="[{'col':'bg-purple', 'txt':'11'}, {'col':'bg-yellow', 'txt':'6'}, {'col':'bg-blue', 'txt':'10'}]">
           </sidebar-menu-item>
           <!--<li class="treeview">
             <a href="#"><i class="fa fa-envelope"></i><span class="page">MailBox</span>
@@ -212,8 +211,7 @@
               </li>
             </ul>
           </li>-->
-           <sidebar-menu name="MailBox" menu-icon="fa-envelope"
-            :labels="[{'col':'bg-blue', 'txt':'11'}, {'col':'bg-red', 'txt':'9'}, {'col':'bg-yellow', 'txt':'17'}]">
+          <sidebar-menu name="MailBox" menu-icon="fa-envelope" :labels="[{'col':'bg-blue', 'txt':'11'}, {'col':'bg-red', 'txt':'9'}, {'col':'bg-yellow', 'txt':'17'}]">
             <sidebar-menu-item name="Inbox" link="inbox"></sidebar-menu-item>
             <sidebar-menu-item name="Compose" link="compose" menu-icon="fa-edit"></sidebar-menu-item>
             <sidebar-menu-item name="Read" link="readmail"></sidebar-menu-item>
@@ -287,7 +285,6 @@
           <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-green"></i> <span>Misc</span></a></li>
-          
         </ul>
         <!-- /.sidebar-menu -->
       </section>
@@ -308,7 +305,6 @@
       </section>
       <router-view></router-view>
     </div>
-    <!--<hello></hello>-->
     <!-- /.content-wrapper -->
     <!-- Main Footer -->
     <footer class="main-footer">
@@ -323,7 +319,7 @@
   </div>
 </template>
 <script>
-import faker from 'faker'
+//import faker from 'faker'
 import asideTabs from './AsideTabs.vue'
 import sidebarMenu from './SideBarMenu.vue'
 import sidebarMenuItem from './SideBarMenuItem.vue'
@@ -355,17 +351,30 @@ module.exports = {
       return this.$parent.$store
     },
     state: function () {
-      return this.store.state
+      return (this.store.state ? this.store.state : {userInfo: {
+                messages: [],
+                notifications: [],
+                tasks: []}})
+    },
+    messageCount: function() {
+      return (this.state && this.state.userInfo && this.state.userInfo.messages ? this.state.userInfo.messages.length : 0)
+
+    },
+    notificationCount: function(){
+      return (this.state && this.state.userInfo && this.state.userInfo.notifications ? this.state.userInfo.notifications.length : 0)
+    },
+    taskCount: function(){
+      return (this.state && this.state.userInfo && this.state.userInfo.tasks ? this.state.userInfo.tasks.length : 0)
     },
     callAPI: function () {
       return this.$parent.callAPI
     },
     demo: function () {
       return {
-        displayName: faker.name.findName(),
-        avatar: faker.image.avatar(),
-        email: faker.internet.email(),
-        randomCard: faker.helpers.createCard()
+        displayName: 'Harry Ho', //faker.name.findName(),
+        avatar: '/static/img/avatar0.png', // faker.image.avatar(),
+        email: 'HarryHo@Vue2Admin.com', // faker.internet.email(),
+        randomCard: null // faker.helpers.createCard()
       }
     },
     year: function () {
@@ -396,6 +405,7 @@ module.exports = {
       }
     },
     asideTabs: function (){
+      
       if (window.$('control-sidebar').hasClass('control-sidebar-open')){
         window.$('control-sidebar').removeClass('control-sidebar-open')
       }
@@ -405,8 +415,8 @@ module.exports = {
     }
   },
   mounted: function () {
-    // Page is ready. Let's load our functions!   
-    this.callAPI('GET', 'static/data/userinfo.json').then(
+    // Page is ready. Let's load our functions!  
+    this.callAPI('GET', '/static/data/userInfo.json').then(
       ok => {
        this.$parent.$store.commit('setUserInfo', ok.body)
     }, err => {

@@ -819,16 +819,15 @@
 </template>
 
 <script>
-import Chart from 'chart.js'
-// import $ from 'jquery'
-import moment from 'moment'
-
-// $(function () {  
+ 
   export default {
-
-    name: 'Chartjs',
+    name: 'Dashboard2',
     mounted () {
-   let $ = window.$
+
+      let $ = window.$;
+      let moment = window.moment;
+      let Chart = window.Chart;
+
   // Get context with jQuery - using jQuery's .get() method.
     var salesChartCanvas = $("#salesChart").get(0).getContext("2d");
     // This will get the first returned node in the jQuery collection.
@@ -995,7 +994,6 @@ import moment from 'moment'
     * Create a world map with markers
     */
 
-    // this.$nextTick(function () {
         // Add map
       window.jQuery.getScript('/static/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js', function (data, textStatus, jqxhr) {
         window.jQuery.getScript('/static/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js', function (data, textStatus, jqxhr) {
@@ -1111,6 +1109,8 @@ import moment from 'moment'
 
 </script>
 <style>
+  @import url('/static/css/ionicons.min.css');
+
 .info-box {
   cursor: pointer;
 }

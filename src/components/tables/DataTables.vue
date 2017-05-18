@@ -4,7 +4,7 @@
       <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">Hover Data Table</h3>
+            <h3 class="box-title"> Data Table</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -113,30 +113,59 @@
         ]
 
     export default {
-
-      mounted () {
+      name: 'DataTables',
+      mounted () {        
+        let $ = window.$      
         
-        let $ = window.$
-      
-              $(function () {
+        $(function () {
 
-                console.log(this.tableData)
-                $("#example1").DataTable(
-                    {
-                      "data": tableData
-                    }
-                  );
-
-                $('#example2').DataTable({
-                  "data": tableData,
+          console.log(this.tableData)
+          $("#example1").DataTable(
+              {
+                "data": tableData,
                   "paging": true,
-                  "lengthChange": false,
-                  "searching": false,
-                  "ordering": false,
-                  "info": true,
-                  "autoWidth": false
-                });
-              });       
-        }
+            "lengthChange": false,
+            "searching": false,
+            "ordering": false,
+            "info": true,
+            "autoWidth": false
+              }
+            );
+
+          $('#example2').DataTable({
+            "data": tableData
+          
+          });
+        });       
+      }
   }
 </script>
+
+<style>
+/* Using the bootstrap style, but overriding the font to not draw in
+   the Glyphicons Halflings font as an additional requirement for sorting icons.
+
+   An alternative to the solution active below is to use the jquery style
+   which uses images, but the color on the images does not match adminlte.
+
+@import url('/static/js/plugins/datatables/jquery.dataTables.min.css');
+*/
+
+@import url('/static/js/plugins/datatables/dataTables.bootstrap.css');
+
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after {
+  font-family: 'FontAwesome';
+}
+
+table.dataTable thead .sorting:after {
+  content: "\f0dc";
+}
+
+table.dataTable thead .sorting_asc:after {
+  content: "\f0dd";
+}
+
+table.dataTable thead .sorting_desc:after {
+  content: "\f0de";
+}
+</style>

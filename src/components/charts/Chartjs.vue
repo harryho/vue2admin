@@ -1,115 +1,103 @@
 <template>
-    <section class="content">
-      <div class="row">
-        <div class="col-md-6">
-          <!-- AREA CHART -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Area Chartjs</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+  <section class="content">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- AREA CHART -->
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Area Chartjs</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
             </div>
-            <div class="box-body">
-              <div class="chart">
-                <canvas id="areaChart" style="height:250px"></canvas>
-              </div>
-            </div>
-            <!-- /.box-body -->
           </div>
-          <!-- /.box -->
-
-          <!-- DONUT CHART -->
-          <div class="box box-danger">
-            <div class="box-header with-border">
-              <h3 class="box-title">Donut Chartjs</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
+          <div class="box-body">
+            <div class="chart">
+              <canvas id="areaChart" style="height:250px"></canvas>
             </div>
-            <div class="box-body">
-              <canvas id="pieChart" style="height:250px"></canvas>
-            </div>
-            <!-- /.box-body -->
           </div>
-          <!-- /.box -->
-
+          <!-- /.box-body -->
         </div>
-        <!-- /.col (LEFT) -->
-        <div class="col-md-6">
-          <!-- LINE CHART -->
-          <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">Line Chartjs</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+        <!-- /.box -->
+        <!-- DONUT CHART -->
+        <div class="box box-danger">
+          <div class="box-header with-border">
+            <h3 class="box-title">Donut Chartjs</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
             </div>
-            <div class="box-body">
-              <div class="chart">
-                <canvas id="lineChart" style="height:250px"></canvas>
-              </div>
-            </div>
-            <!-- /.box-body -->
           </div>
-          <!-- /.box -->
-
-          <!-- BAR CHART -->
-          <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title">Bar Chartjs</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div class="chart">
-                <canvas id="barChart" style="height:230px"></canvas>
-              </div>
-            </div>
-            <!-- /.box-body -->
+          <div class="box-body">
+            <canvas id="pieChart" style="height:250px"></canvas>
           </div>
-          <!-- /.box -->
-
+          <!-- /.box-body -->
         </div>
-        <!-- /.col (RIGHT) -->
+        <!-- /.box -->
       </div>
-      <!-- /.row -->
-
-    </section>
+      <!-- /.col (LEFT) -->
+      <div class="col-md-6">
+        <!-- LINE CHART -->
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">Line Chartjs</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="chart">
+              <canvas id="lineChart" style="height:250px"></canvas>
+            </div>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        <!-- BAR CHART -->
+        <div class="box box-success">
+          <div class="box-header with-border">
+            <h3 class="box-title">Bar Chartjs</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="chart">
+              <canvas id="barChart" style="height:230px"></canvas>
+            </div>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col (RIGHT) -->
+    </div>
+    <!-- /.row -->
+  </section>
 </template>
-
 <script>
-  import $ from 'jquery'
-  require('bootstrap')
-  import Chartjs from 'chart.js'
-
   export default {
     name: 'Chartjs',
     mounted () {
-      // this.$nextTick(function () {
+  
         /* ChartJS
         * -------
         * Here we will create a few charts using ChartJS
         */
-
+       let $ = window.$;
+        let Chartjs = window.Chart;
         //--------------
         //- AREA CHART -
         //--------------
 
         // Get context with jQuery - using jQuery's .get() method.
+
         var areaChartCanvas = $("#areaChart").get(0).getContext("2d");
 
       var _chartData = {
@@ -331,4 +319,5 @@
     }
   }
 </script>
+
 

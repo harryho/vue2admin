@@ -19,7 +19,7 @@
     },
     methods: {
       callAPI: function (method, url, data, callback) {
-        console.log('callAPI ...')
+        // console.log('callAPI ...')
         this.callingAPI = true
         url = url || this.serverURI // if no url is passed then inheret local server URI
         return this.caller({

@@ -359,17 +359,18 @@
 
     </section></template>
 <script>
-  import $ from 'jquery'
+  // import $ from 'jquery'
   // import widget from 'jquery.ui.widget'
-  require('bootstrap')
-  require('jquery-slimscroll')
-  import sparkline from 'jquery-sparkline'
-  import knob from 'jquery-knob'
+  // require('bootstrap')
+  // require('jquery-slimscroll')
+  // import sparkline from 'jquery-sparkline'
+  // import knob from 'jquery-knob'
 
-  // $(function () {
   export default {
-    // name: 'Chartjs',
     mounted () {
+
+    let $ = window.$;
+
     /* jQueryKnob */
     $(".knob").knob({
       /*change : function (value) {

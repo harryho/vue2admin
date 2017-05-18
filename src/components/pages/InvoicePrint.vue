@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-xs-12">
         <h2 class="page-header">
-          <i class="fa fa-globe"></i> AdminLTE, Inc.
+          <i class="fa fa-globe"></i> Vue 2 Admin, Inc.
           <small class="pull-right">Date: 2/10/2014</small>
         </h2>
       </div>
@@ -18,11 +18,11 @@
       <div class="col-sm-4 invoice-col">
         From
         <address>
-          <strong>Admin, Inc.</strong><br>
-          795 Folsom Ave, Suite 600<br>
+          <strong>Vue 2 Admin, Inc.</strong><br>
+          1 Folsom Ave, Suite 600<br>
           San Francisco, CA 94107<br>
           Phone: (804) 123-5432<br>
-          Email: info@almasaeedstudio.com
+          Email: info@vue2admin.com
         </address>
       </div>
       <!-- /.col -->
@@ -30,7 +30,7 @@
         To
         <address>
           <strong>John Doe</strong><br>
-          795 Folsom Ave, Suite 600<br>
+          1 Folsom Ave, Suite 600<br>
           San Francisco, CA 94107<br>
           Phone: (555) 539-1037<br>
           Email: john.doe@example.com

@@ -353,37 +353,21 @@
     <!-- /.row -->
   </section>
 </template>
-
-<!--<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
-<script src="../../bootstrap/js/bootstrap.min.js"></script>
-<script src="../../plugins/select2/select2.full.min.js"></script>
-<script src="../../plugins/input-mask/jquery.inputmask.js"></script>
-<script src="../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<script src="../../plugins/daterangepicker/daterangepicker.js"></script>
-<script src="../../plugins/datepicker/bootstrap-datepicker.js"></script>
-<script src="../../plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
-<script src="../../plugins/timepicker/bootstrap-timepicker.min.js"></script>
-<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<script src="../../plugins/iCheck/icheck.min.js"></script>
-<script src="../../plugins/fastclick/fastclick.js"></script>
-<script src="../../dist/js/app.min.js"></script>
-<script src="../../dist/js/demo.js"></script>-->
-
 <script>
-  import $ from 'jquery'
-  require('bootstrap')
-  import moment from 'moment'
-  require('icheck')
-  require('select2')
-  require('bootstrap-datepicker')
+  // import $ from 'jquery'
+  // require('bootstrap')
+  // import moment from 'moment'
+  // require('icheck')
+  // require('select2')
+  // require('bootstrap-datepicker')
 
   // window.$(function () {
   export default {
     name: 'AdvancedForm',
     mounted () {
-        var $ = window.$
+        let $ = window.$
+        let moment = window.moment;
+              
         //Initialize Select2 Elements
         $(".select2").select2();
 
@@ -451,3 +435,10 @@
       }
     }
 </script>
+<style>
+  @import url('/static/js/plugins/select2/select2.min.css');
+  
+  @import url('/static/js/plugins/colorpicker/bootstrap-colorpicker.min.css');
+  @import url('/static/js/plugins/timepicker/bootstrap-timepicker.min.css');
+  
+</style>

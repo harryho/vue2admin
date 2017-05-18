@@ -82,8 +82,8 @@
 </template>
 
 <script>
-  import $ from 'jquery'
-  require('bootstrap')
+  // import $ from 'jquery'
+  // require('bootstrap')
   // require('raphael')
   // import Morris from 'morrisjs'
 
@@ -93,6 +93,7 @@
     name: 'Morris',
     mounted () {
 
+let $ = window.$;
     var Raphael = window['Raphael']
     var Morris = window['Morris']
 
@@ -178,6 +179,10 @@
     }
   }
 </script>
-</body>
 
-</html>
+<style>
+  @import url('/static/js/plugins/morris/morris.css');
+
+</style>
+
+  <!--<link rel="stylesheet" href="/static/js/plugins/morris/morris.css">-->

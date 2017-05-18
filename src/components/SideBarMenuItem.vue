@@ -48,8 +48,6 @@ module.exports = {
         }
     },
     mounted: function(){
-        console.log(this.isMultiLevel)
-        console.log(this.labels)
     }
 }       
 </script>

@@ -123,7 +123,7 @@
 
 <script>
   export default {
-    // name: 'Chartjs',
+
     mounted () {
         var $ = window.$;
         
@@ -382,12 +382,6 @@
      * END DONUT CHART
      */
 
-  // });
-
-  /*
-   * Custom Label formatter
-   * ----------------------
-   */
     }
   }
 </script>

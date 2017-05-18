@@ -276,9 +276,7 @@ module.exports = {
             "info": true,
             "autoWidth": false
       }
-
-      )
-    // })
+    )
   }
 }
 </script>

@@ -82,7 +82,7 @@
                 <span  class="label label-danger">{{ taskCount }} </span>
               </a>
               <ul class="dropdown-menu">
-                <li class="header">You have {{ taskCount } task(s)</li>
+                <li class="header">You have {{ taskCount }} task(s)</li>
                 <li v-if="taskCount> 0">
                   <!-- Inner menu: contains the tasks -->
                   <ul class="menu">

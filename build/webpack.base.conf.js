@@ -84,9 +84,9 @@ module.exports = {
     plugins: [
       new webpack.ProvidePlugin({
             $: "jquery",
-            jQuery: "jquery",
-            ckeditor: "ckeditor",
-            wysihtml: "wysihtml"
+            jQuery: "jquery"
+            // ckeditor: "ckeditor",
+            // wysihtml: "wysihtml"
         })
     ]
   },

@@ -118,17 +118,15 @@
         let $ = window.$      
         
         $(function () {
-
-          console.log(this.tableData)
           $("#example1").DataTable(
               {
                 "data": tableData,
-                  "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": false,
-            "info": true,
-            "autoWidth": false
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": true,
+                "autoWidth": false
               }
             );
 

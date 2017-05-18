@@ -1,7 +1,8 @@
 <template>
   <li>
     <router-link v-if="hasSubMenu === false" :to="link">
-        <i class="fa" :class="[menuIcon ? menuIcon : 'fa-circle-o']"></i>{{name}}
+        <i class="fa" :class="[menuIcon ? menuIcon : 'fa-circle-o']"></i>
+        <span>{{name}}</span>
         <span v-if="labels.length > 0 " class="pull-right-container">
             <small v-for="label in labels" class="label pull-right" :class="label.col">{{label.txt}}</small>&nbsp;
         </span>

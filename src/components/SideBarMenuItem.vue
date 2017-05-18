@@ -25,30 +25,29 @@
 
 <script>
 module.exports = {
-    name: 'sidebarmenu',
+    name: 'SideBarMenuItem',
     props: {
         name: { required: true },
         link: { type: String, required: true },
-        isMultiLevel: { required: false, default: 'no' },
+        isMultiLevel: { required: false, default: false },
         menuIcon: { required: false },
         labels: { required: false, default: () => [] } 
     },
     computed: {
-      hasSubMenu: function(){
-        return this.isMultiLevel === 'yes';
+      hasSubMenu: function () {
+        return this.isMultiLevel;
       }
     },
     methods: {
-        menuClick: function (){
-            if (window.$('treeview-menu').hasClass('open-menu')){
+        menuClick: function () {
+            if (window.$('treeview-menu').hasClass('open-menu')) {
                 window.$('treeview-menu').removeClass('actopen-menuive')
-            }
-            else {
+            } else {
                 window.$('treeview-menu').addClass('open-menu')
             }
         }
     },
-    mounted: function(){
+    mounted: function () {
     }
-}       
+}
 </script>

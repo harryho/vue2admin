@@ -54,22 +54,16 @@
   </section>
 </template>
 <script>
-  // import $ from 'jquery'
-
-
-  export default {
-    name: 'Editor',
-    mounted () {
-      
-      // CKEditor
-      let CKEDITOR = window['CKEDITOR']        
-      CKEDITOR.replace('editor1')
-
-      // bootstrap WYSIHTML5 - text editor
-      window.$('#wysi').wysihtml5()
-
-    }
+export default {
+  name: 'Editor',
+  mounted () {      
+    // CKEditor
+    let CKEDITOR = window['CKEDITOR']        
+    CKEDITOR.replace('editor1')
+    // bootstrap WYSIHTML5 - text editor
+    window.$('#wysi').wysihtml5()
   }
+}
 </script>
 <style>
   @import url('/static/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css');

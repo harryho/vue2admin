@@ -82,23 +82,11 @@
 </template>
 
 <script>
-  // import $ from 'jquery'
-  // require('bootstrap')
-  // require('raphael')
-  // import Morris from 'morrisjs'
-
-  // $(function () {
-  //   "use strict";
-  export default {
-    name: 'Morris',
-    mounted () {
-
-let $ = window.$;
-    var Raphael = window['Raphael']
-    var Morris = window['Morris']
-
-    console.log(Raphael)
-    console.log(Morris)
+export default {
+  name: 'Morris',
+  mounted () {
+    let Raphael = window['Raphael']
+    let Morris = window['Morris']
     // AREA CHART
     var area = new Morris.Area({
       element: 'revenue-chart',
@@ -145,7 +133,7 @@ let $ = window.$;
       hideHover: 'auto'
     });
 
-    //DONUT CHART
+    // DONUT CHART
     var donut = new Morris.Donut({
       element: 'sales-chart',
       resize: true,
@@ -157,7 +145,7 @@ let $ = window.$;
       ],
       hideHover: 'auto'
     });
-    //BAR CHART
+    // BAR CHART
     var bar = new Morris.Bar({
       element: 'bar-chart',
       resize: true,
@@ -176,13 +164,11 @@ let $ = window.$;
       labels: ['CPU', 'DISK'],
       hideHover: 'auto'
     });
-    }
   }
+}
 </script>
 
 <style>
   @import url('/static/js/plugins/morris/morris.css');
 
 </style>
-
-  <!--<link rel="stylesheet" href="/static/js/plugins/morris/morris.css">-->

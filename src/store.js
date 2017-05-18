@@ -29,7 +29,7 @@ const mutations = {
   setToken (state, token) {
     state.token = token
   },
-  setUserInfo (state , userInfo) {
+  setUserInfo (state, userInfo) {
     state.userInfo = userInfo
   }
 }

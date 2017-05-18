@@ -4,11 +4,9 @@ import NotFoundView from './components/pages/404.vue'
 import ServerErrorView from './components/pages/500.vue'
 
 //  -- Dashboard --
-// import DashboardView from './components/dashboard/Dashboard.1.vue'
 import Dashboard1View from './components/dashboard/Dashboard.1.vue'
 import Dashboard2View from './components/dashboard/Dashboard.2.vue'
 import Dashboard3View from './components/dashboard/Dashboard.3.vue'
-
 
 // -- UI --
 import ButtonsView from './components/ui/Buttons.vue'
@@ -49,7 +47,6 @@ import MorrisView from './components/charts/Morris.vue'
 import ComposeView from './components/mailbox/Compose.vue'
 import InboxView from './components/mailbox/Inbox.vue'
 import ReadMailView from './components/mailbox/ReadMail.vue'
-
 
 // Routes
 const routes = [

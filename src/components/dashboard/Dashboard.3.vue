@@ -179,10 +179,8 @@ module.exports = {
     }
   },
   mounted: function () {
-         let $ = window.$;
-  let Chart = window.Chart;
- 
-      
+      let $ = window.$
+      let Chart = window.Chart      
 
       var ctx = document.getElementById('trafficBar').getContext('2d')
       var config = {
@@ -243,7 +241,6 @@ module.exports = {
         }
       }
       new Chart(pieChartCanvas, pieConfig) // eslint-disable-line no-new
-
   }
 }
 </script>

@@ -102,9 +102,9 @@
           ["Tasman", "Internet Explorer 4.5", "Mac OS 8-9	", "-	", "X"],
           ["Tasman", "Internet Explorer 5.1", "Mac OS 7.6-9	", "1	", "C"],
           ["Tasman", "Internet Explorer 5.2", "Mac OS 8-X	", "1	", "C"],
-          ["Misc", "NetFront 3.1", "Embedded devices","-", "C"],
+          ["Misc", "NetFront 3.1", "Embedded devices", "-", "C"],
           ["Misc", "NetFront 3.4", "Embedded devices", "-", "A"],
-          ["Misc", "Dillo 0.8", "Embedded devices","-", "X"],
+          ["Misc", "Dillo 0.8", "Embedded devices", "-", "X"],
           ["Misc", "Links", "Text only", "-", "X"],
           ["Misc", "Lynx", "Text only", "-", "X"],
           ["Misc", "IE Mobile", "Windows Mobile 6", "-", "C"],
@@ -114,7 +114,7 @@
 
     export default {
       name: 'DataTables',
-      mounted () {        
+      mounted () {
         let $ = window.$      
         
         $(function () {

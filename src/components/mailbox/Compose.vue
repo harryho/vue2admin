@@ -119,7 +119,7 @@
     mounted () {
       let $ = window.$
       $(function () {
-        //Add text editor
+        // Add text editor
         $("#compose-textarea").wysihtml5();
       });
     }

@@ -27,7 +27,7 @@
           method: method,
           data: data,
           dataType: 'json',
-          success: callback,
+          success: callback
         })
       },
       logout: function () {

@@ -1,4 +1,4 @@
-**[Vue2Admin](https://vue2admin.azurewebsites.net).** is a fully responsive admin template that is inspired by [AdminLTE](https://almsaeedstudio.com). 
+**Vue2Admin** is a fully responsive admin template that is inspired by [AdminLTE](https://almsaeedstudio.com). 
 
 * This template is built-in with Vue 2 at the start.
 * It include Vue Resource, Vuex as well.

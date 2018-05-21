@@ -5,6 +5,8 @@
 * The plugins for this project are loaded with script loader. 
 * Chart.js has been upgraded to 2.x.x 
 
+#### Live Demo
+[Demo App](https://adm-demo.harryho.org)  The demo is just a proof of concept.
 
 #### Screenshots
 
